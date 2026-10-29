@@ -1,0 +1,20 @@
+
+================================================================================
+RESUMEN DE RESULTADOS - TAREA III (CLASIFICACIÓN)
+================================================================================
+Dataset: Violencia Intrafamiliar - Policía Nacional de Colombia
+Variable Objetivo: USO_ARMA_OBJETO (1 = Con Arma/Objeto, 0 = Sin Arma)
+
+1. MÉTRICAS EVALUADAS (CONJUNTO DE PRUEBA):
+             Modelo  Accuracy  Precision   Recall  F1-Score  ROC-AUC  CV F1-Score (5 Folds)
+       Dummy (Base)  0.539667   0.539667 1.000000  0.701018 0.500000               0.700989
+Regresión Logística  0.615083   0.629084 0.698734  0.662082 0.650416               0.657062
+      Random Forest  0.621250   0.620192 0.769302  0.686746 0.653843               0.679406
+
+2. EXPLICABILIDAD Y ANÁLISIS DE NEGOCIO:
+- Sensibilidad / Recall (Clase 1): Random Forest logró un Recall superior (76.93%), 
+  lo que significa que detecta con mayor efectividad las agresiones armadas minimizando los 
+  Falsos Negativos (casos peligrosos pasados por alto).
+- Variables clave: El análisis de Feature Importance demuestra que la ubicación geográfica 
+  (DEPARTAMENTO) y las métricas temporales (MES y DÍA DE LA SEMANA) aportan el mayor peso predictivo.
+================================================================================
